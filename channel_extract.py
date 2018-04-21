@@ -14,7 +14,7 @@ def channelList(url = start_url):
         page_url = host_url+list.get("href")
         print(page_url)
 
-channelList()
+# channelList()
 
 
 ChannelList ='''
@@ -76,7 +76,6 @@ ChannelList ='''
     http://cn.58.com/xiaoyuan/
     http://cn.58.com/ershouqiugou/
     http://cn.58.com/tiaozao/
-    http://cn.58.com/tiaozao/
-    http://cn.58.com/tiaozao/
 
 '''
+# ChannelList =''' http://cn.58.com/zhubaoshipin/ '''
