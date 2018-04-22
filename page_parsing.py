@@ -34,7 +34,7 @@ def get_links_from(channel,page=1,whesell=1):
     s.keep_alive = False
     wb_data =s.get(url,headers=header,proxies=proxy)
 
-    # wb_data = requests.get(url,headers=header,proxies=proxy)
+
 
     time.sleep(5)
     soup = BeautifulSoup(wb_data.text,'lxml')
@@ -58,10 +58,8 @@ def get_links_from(channel,page=1,whesell=1):
 
 def get_list_info(url):
     proxy = get_random_ip(IP_LIST)
-    GetIpCount = 1
     print url
     while (not cip(proxy)):
-        # print(GetIpCount)
         proxy = get_random_ip(IP_LIST)
 
     header = {
@@ -74,11 +72,9 @@ def get_list_info(url):
         s.keep_alive = False
         wb_data = s.get(url, headers=header, proxies=proxy)
 
-        # wb_data = requests.get(url)
         time.sleep(1)
         soup = BeautifulSoup(wb_data.text,"lxml")
-        # error = soup.select("p.et")
-        # print error[0].get_text()
+
 
         no_longer_exist =  soup.find("p", attrs={'class':'et'})
 

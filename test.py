@@ -6,7 +6,7 @@ def test(a):
     if a==1:
         b=2;
     else:
-        # b=b+1
+        b=b+1
         b=3
     print b
 
